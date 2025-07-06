@@ -132,6 +132,89 @@ footer {
     padding: 20px 0;
 }
 
+/* Add this CSS to your static/css/style.css file */
+
+/* --- Heartbeat Animation for Logo --- */
+
+/* This defines the animation steps: scale up, then back down */
+@keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.05); /* The "beat" part */
+    }
+    30% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1); /* Pause until the next beat */
+    }
+  }
+  
+  /* This applies the animation to your logo */
+  #hero-logo {
+    max-width: 70%;
+    opacity: 0.9;
+    /* 
+      Animation properties:
+      - Name: beat
+      - Duration: 2.5 seconds per loop
+      - Iteration: infinite (loops forever)
+      - Timing: ease-in-out (smooth start and end)
+    */
+    animation: beat 2.5s infinite ease-in-out;
+  }
+  /* Add this to static/css/style.css */
+/* You can REMOVE the old #hero-logo and @keyframes beat styles */
+
+
+/* --- Animated Layered Logo --- */
+
+/* 1. The main container for the logo */
+#animated-logo-container {
+    position: relative; /* This is the anchor for the absolute positioning of the layers inside */
+    max-width: 400px; /* Adjust max-width as needed */
+    margin: 0 auto;   /* Center the container */
+  }
+  
+  /* 2. Style for all layers (background and EKG line) */
+  .logo-layer {
+    width: 100%;
+    display: block; /* Removes any extra space below the image */
+  }
+  
+  /* 3. The wrapper that hides and reveals the EKG line */
+  .ekg-line-wrapper {
+    position: absolute; /* Places this layer directly on top of the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* This is the key! It hides the parts of the EKG line that are outside this box. */
+  }
+  
+  /* 4. The EKG line image itself, which will be animated */
+  .ekg-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* We start it off-screen to the left and animate it across */
+    animation: draw-ekg-line 3s linear infinite;
+  }
+  
+  /* 5. The animation definition */
+  @keyframes draw-ekg-line {
+    0% {
+      /* Starts completely off-screen to the left */
+      transform: translateX(-100%);
+    }
+    100% {
+      /* Ends completely off-screen to the right */
+      transform: translateX(100%);
+    }
+  }
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     h1, #home h1 {

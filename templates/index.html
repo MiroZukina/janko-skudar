@@ -10,7 +10,7 @@
     <title>Janko Skudar | Psychotherapist in Ireland</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32px" href="{{ url_for('static', filename='images/logo.jpeg') }}">
+    <link rel="icon" type="image/png" sizes="32px" href="{{ url_for('static', filename='images/logo.png') }}">
     
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <img src="{{ url_for('static', filename='images/logo.jpeg') }}" class="img-fluid me-3" alt="Company Logo" style="max-width: 60px; border-radius: 50%;">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid me-3" alt="Company Logo" style="max-width: 60px; border-radius: 50%;">
                     <span>Janko Skudar<br/><small>Psychotherapist</small></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,14 +51,24 @@
     <!-- Section 1: Home / Hero -->
     <section id="home" class="d-flex align-items-center text-white">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
+         
+            <div class="row align-items-center">
+                
+                <div class="col-lg-7">
                     <div class="text-box-with-bg">
                         <h1>Guiding You Towards Clarity and Healing</h1>
                         <p class="lead">I help individuals and couples navigate life's challenges, including depression, anxiety, trauma, and relationship issues, creating a path toward a more fulfilling life.</p>
                         <a href="#contact" class="btn btn-primary btn-lg mt-3">Schedule a Consultation</a>
                     </div>
                 </div>
+    
+                <div class="col-lg-5 text-center">
+                   
+                    <img id="hero-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Janko Skudar" class="img-fluid shadow-lg">
+                </div>
+            
+                </div>
+    
             </div>
         </div>
     </section>
@@ -167,7 +177,7 @@
                 <a class="social-link" href="https://twitter.com/" target="_blank" title="Twitter">
                     <img src="{{ url_for('static', filename='images/twitter-x.svg') }}" alt="Twitter">
                 </a>
-                <a class="social-link" href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <a class="social-link" href="https://www.instagram.com/jankoskudar/" target="_blank" title="Instagram">
                     <img src="{{ url_for('static', filename='images/instagram.svg') }}" alt="Instagram">
                 </a>
             </div>
@@ -179,6 +189,7 @@
     </footer>
 
     <!-- Bootstrap JS -->
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
