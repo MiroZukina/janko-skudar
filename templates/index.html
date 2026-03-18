@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Description -->
     <meta name="description" content="Janko Skudar is a psychotherapist in Ireland specializing in anxiety, depression, trauma, and relationship issues. Offering a safe and integrative approach to therapy.">
     
     <title>Janko Skudar | Psychotherapist in Ireland</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32px" href="{{ url_for('static', filename='images/logo.png') }}">
     
-    <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Your Custom CSS (must be last) -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -29,17 +24,17 @@
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid me-3" alt="Company Logo" style="max-width: 60px; border-radius: 50%;">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid me-3" alt="Logo" style="max-width: 50px; border-radius: 50%;">
                     <span>Janko Skudar<br/><small>Psychotherapist</small></span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#approach">My Approach</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
                         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -48,87 +43,84 @@
         </nav>
     </header>
 
-    <!-- Section 1: Home / Hero -->
-    <section id="home" class="d-flex align-items-center text-white">
+    <section id="home" class="text-white">
         <div class="container">
-         
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center">
                 
-                <div class="col-lg-7">
+                <div class="col-lg-7 mb-4 mb-lg-0">
                     <div class="text-box-with-bg">
                         <h1>Guiding You Towards Clarity and Healing</h1>
-                        <p class="lead">I help individuals and couples navigate life's challenges, including depression, anxiety, trauma, and relationship issues, creating a path toward a more fulfilling life.</p>
+                        <p class="lead">I help individuals and couples navigate challenges like anxiety, depression, trauma, and relationship issues, supporting your journey to a more fulfilling life.</p>
                         <a href="#contact" class="btn btn-primary btn-lg mt-3">Schedule a Consultation</a>
                     </div>
                 </div>
-    
+                
                 <div class="col-lg-5 text-center">
-                   
-                    <img id="hero-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Janko Skudar" class="img-fluid shadow-lg">
+                    <img id="hero-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Janko Skudar Logo" class="img-fluid">
                 </div>
-            
-                </div>
-    
+                
             </div>
         </div>
     </section>
 
-    <!-- Section 2: About Me -->
     <section id="about" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="section-title">My Journey to Psychotherapy</h2>
-                    <p>Hi, I’m Janko Skudar. My path to becoming a therapist was not a straight line, but it has given me a unique perspective on change and personal growth. After graduating with a degree in petroleum engineering and spending years traveling and exploring different careers, I realized my true calling was in helping others navigate their inner worlds.</p>
-                    <p>This realization led me to Ireland, where I dedicated myself to a 4-year journey to become a psychotherapist. I've since worked with diverse clients at organizations like Pieta House and within the Irish prison system, focusing on depression, trauma, and addiction. I am passionate about this work and feel privileged to support people on their path to healing.</p>
+                    <h2 class="section-title">About Me</h2>
+                    <p>Hello, I’m Janko Skudar. My journey from engineering to psychotherapy has given me a unique perspective on personal change, resilience, and mental health. I have trained and worked extensively in Ireland, supporting adults from diverse backgrounds with anxiety, depression, trauma, relationships, and addiction. My goal is to provide a safe, understanding, and reflective space where you can explore your inner world and find meaningful change.</p>
                 </div>
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Janko Skudar" class="img-fluid rounded-circle shadow-lg" style="max-width: 70%;">
+                    <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Janko Skudar Profile" class="img-fluid rounded-circle shadow-lg" style="max-width: 70%;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: My Approach -->
     <section id="approach" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title">My Therapeutic Approach</h2>
-                <p class="lead">Therapy is a collaborative journey, and my role is to provide a safe, confidential, and non-judgemental space for your story.</p>
+                <p class="lead">I provide an integrative and collaborative therapy experience, tailoring sessions to your unique needs.</p>
             </div>
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-md-4 mb-4">
-                    <h4>Integrative Therapy</h4>
-                    <p>I don't believe in a "one-size-fits-all" approach. I draw from various modalities (like CBT, Humanistic, and Psychodynamic) to tailor therapy specifically to your unique needs and goals.</p>
+                    <div class="p-3">
+                        <h4>Integrative Therapy</h4>
+                        <p>Therapy is shaped around you, using a mix of approaches to explore emotions and awareness.</p>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h4>Your First Session</h4>
-                    <p>The first session is an opportunity for us to get to know each other. We will discuss what brought you to therapy, your hopes, and any concerns you may have. It's a gentle, pressure-free start.</p>
+                    <div class="p-3">
+                        <h4>Your First Session</h4>
+                        <p>A chance to meet and explore whether therapy with me feels like the right fit for you.</p>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h4>A Safe Space</h4>
-                    <p>My commitment is to create an environment of trust and empathy. Here, you can explore difficult thoughts and feelings, knowing you will be met with acceptance and professional support.</p>
+                    <div class="p-3">
+                        <h4>A Safe Space</h4>
+                        <p>A supportive environment to explore thoughts and emotions openly for meaningful change.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: FAQ -->
     <section id="faq" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title">Frequently Asked Questions</h2>
             </div>
-            <div class="accordion" id="faqAccordion">
+            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            What are your session fees and do you offer online sessions?
+                            What are your session fees?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            My standard session fee is [Your Fee Here, e.g., €70] per 50-minute session. I offer both in-person sessions at my office and secure online sessions via video call to accommodate your needs.
+                            Please contact me directly for current rates and availability for both in-person and online sessions.
                         </div>
                     </div>
                 </div>
@@ -140,19 +132,7 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            The duration of therapy varies greatly depending on individual needs and goals. Some clients find relief and resolution in a few short-term sessions, while others benefit from longer-term work to explore deeper issues. We will discuss this together and regularly review our progress.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                            Is everything I share in therapy confidential?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, confidentiality is a cornerstone of therapy and a legal and ethical requirement. Everything you discuss is kept strictly private, with a few legal exceptions related to risk of harm to yourself or others, which we will discuss in our first session.
+                            Duration varies based on your individual needs, from short-term focus to longer-term exploration.
                         </div>
                     </div>
                 </div>
@@ -160,37 +140,16 @@
         </div>
     </section>
 
-    <!-- Section 5: Contact -->
     <section id="contact" class="py-5 bg-light">
         <div class="container text-center">
-            <h2 class="section-title">Ready to Take the Next Step?</h2>
-            <p class="lead">Reaching out is the first step towards change. I invite you to contact me to schedule a consultation.</p>
+            <h2 class="section-title">Take the Next Step</h2>
+            <p class="lead">Contact me today to begin your journey toward clarity and healing.</p>
             <div class="mt-4">
-                <a href="mailto:janko.skudar@gmail.com?subject=Appointment%20Inquiry" class="btn btn-primary btn-lg" target="_blank">
-                    Email Me to Make an Appointment
+                <a href="mailto:janko.skudar@gmail.com?subject=Appointment%20Inquiry" class="btn btn-primary btn-lg">
+                    Email Me
                 </a>
             </div>
-            <div class="d-flex justify-content-center gap-3 mt-4">
-                <a class="social-link" href="https://web.telegram.org/k/" target="_blank" title="Telegram">
-                    <img src="{{ url_for('static', filename='images/telegram.svg') }}" alt="Telegram">
-                </a>
-                <a class="social-link" href="https://twitter.com/" target="_blank" title="Twitter">
-                    <img src="{{ url_for('static', filename='images/twitter-x.svg') }}" alt="Twitter">
-                </a>
-                <a class="social-link" href="https://www.instagram.com/jankoskudar/" target="_blank" title="Instagram">
-                    <img src="{{ url_for('static', filename='images/instagram.svg') }}" alt="Instagram">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center py-4">
-        <p>© 2025 Janko Skudar Psychotherapy. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
-</html>
+            <div class="d-flex justify-content-center gap-4 mt-4">
+                <a class="social-link" href="#" target="_blank"><img src="{{ url_for('static', filename='images/telegram.svg') }}" alt="Telegram"></a>
+                <a class="social-link" href="#" target="_blank"><img src="{{ url_for('static', filename='images/twitter-x.svg') }}" alt="Twitter"></a>
+                <a class="social-link" href="

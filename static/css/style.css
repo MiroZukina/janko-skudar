@@ -1,5 +1,4 @@
-/* 
-Color Palette:
+/* Color Palette:
 - Dark Blue (Headings, Navbar): #2c3e50
 - Primary Blue (Buttons, Links): #3498db
 - Light Grey (Backgrounds): #f8f9fa
@@ -8,224 +7,177 @@ Color Palette:
 
 /* --- General & Font Styles --- */
 body {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: #2c3e50;
+  font-weight: 700;
+  color: #2c3e50;
 }
 
 .section-title {
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 p {
-    line-height: 1.7;
-    font-size: 1.05rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 /* --- Navigation Bar --- */
 .navbar {
-    background-color: #2c3e50;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
+  background-color: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand small {
-    font-size: 0.8rem;
-    font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .nav-link {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 /* --- Section Styling --- */
 section {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .bg-light {
-    background-color: #f8f9fa !important;
+  background-color: #f8f9fa !important;
 }
 
 /* --- Home / Hero Section --- */
 #home {
-    min-height: 100vh;
-    width: 100%;
-    background-image: url('/static/images/IMG2.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Creates a nice parallax effect */
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/static/images/IMG2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect for desktop */
+  display: flex;
+  align-items: center;
 }
 
 .text-box-with-bg {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2.5rem;
-    border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2.5rem;
+  border-radius: 10px;
 }
 
 #home h1 {
-    color: #fff;
-    font-size: 3rem;
+  color: #fff;
+  font-size: 3rem;
 }
 
 #home .lead {
-    color: #f1f1f1;
-    font-size: 1.25rem;
+  color: #f1f1f1;
+  font-size: 1.25rem;
+}
+
+/* --- Logo & Animations --- */
+#hero-logo {
+  max-width: 80%;
+  height: auto;
+  opacity: 0.9;
+  animation: beat 2.5s infinite ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.05); }
+  30% { transform: scale(1); }
+  100% { transform: scale(1); }
 }
 
 /* --- Buttons & Links --- */
 .btn-primary {
-    background-color: #3498db;
-    border-color: #3498db;
-    padding: 12px 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+  background-color: #3498db;
+  border-color: #3498db;
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-    transform: translateY(-2px);
+  background-color: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-2px);
 }
 
 /* --- FAQ Accordion --- */
 .accordion-button {
-    font-weight: 700;
-    color: #2c3e50;
+  font-weight: 700;
+  color: #2c3e50;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: rgba(52, 152, 219, 0.1);
-    color: #2c3e50;
-}
-
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
-}
-
-/* --- Contact & Social Links --- */
-.social-link img {
-    width: 30px;
-    height: 30px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.social-link:hover img {
-    opacity: 1;
+  background-color: rgba(52, 152, 219, 0.1);
 }
 
 /* --- Footer --- */
 footer {
-    background-color: #2c3e50;
-    color: #f8f9fa;
-    padding: 20px 0;
+  background-color: #2c3e50;
+  color: #f8f9fa;
+  padding: 20px 0;
 }
 
-/* Add this CSS to your static/css/style.css file */
+/* ============================================================
+ MOBILE FIXES (Targeting phones and tablets)
+ ============================================================ */
 
-/* --- Heartbeat Animation for Logo --- */
-
-/* This defines the animation steps: scale up, then back down */
-@keyframes beat {
-    0% {
-      transform: scale(1);
-    }
-    15% {
-      transform: scale(1.05); /* The "beat" part */
-    }
-    30% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1); /* Pause until the next beat */
-    }
+@media (max-width: 991px) {
+  #home {
+      /* 1. POSITION THE SUNSET ON THE LEFT/MIDDLE */
+      /* 'fixed' background is disabled here because it breaks mobile positioning */
+      background-attachment: scroll !important; 
+      background-position: 85% center !important; 
+      
+      /* 2. FIX THE GAP */
+      /* Change from 'center' to 'flex-start' to pull everything up */
+      align-items: flex-start !important; 
+      padding-top: 110px; /* Space for the fixed navbar */
+      padding-bottom: 40px;
+      height: auto; 
   }
-  
-  /* This applies the animation to your logo */
+
+  .text-box-with-bg {
+      padding: 1.5rem;
+      margin-bottom: 25px !important; /* Forces the logo to sit closer to the button */
+      text-align: center;
+  }
+
+  #home h1 {
+      font-size: 2rem;
+  }
+
   #hero-logo {
-    max-width: 70%;
-    opacity: 0.9;
-    /* 
-      Animation properties:
-      - Name: beat
-      - Duration: 2.5 seconds per loop
-      - Iteration: infinite (loops forever)
-      - Timing: ease-in-out (smooth start and end)
-    */
-    animation: beat 2.5s infinite ease-in-out;
+      max-width: 180px; /* Prevents logo from being too huge on mobile */
+      margin-top: 0;
   }
-  /* Add this to static/css/style.css */
-/* You can REMOVE the old #hero-logo and @keyframes beat styles */
 
+  section {
+      padding: 60px 0;
+  }
+}
 
-/* --- Animated Layered Logo --- */
-
-/* 1. The main container for the logo */
-#animated-logo-container {
-    position: relative; /* This is the anchor for the absolute positioning of the layers inside */
-    max-width: 400px; /* Adjust max-width as needed */
-    margin: 0 auto;   /* Center the container */
+@media (max-width: 480px) {
+  #home h1 {
+      font-size: 1.7rem;
   }
   
-  /* 2. Style for all layers (background and EKG line) */
-  .logo-layer {
-    width: 100%;
-    display: block; /* Removes any extra space below the image */
+  #home .lead {
+      font-size: 1rem;
   }
-  
-  /* 3. The wrapper that hides and reveals the EKG line */
-  .ekg-line-wrapper {
-    position: absolute; /* Places this layer directly on top of the background */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* This is the key! It hides the parts of the EKG line that are outside this box. */
-  }
-  
-  /* 4. The EKG line image itself, which will be animated */
-  .ekg-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* We start it off-screen to the left and animate it across */
-    animation: draw-ekg-line 3s linear infinite;
-  }
-  
-  /* 5. The animation definition */
-  @keyframes draw-ekg-line {
-    0% {
-      /* Starts completely off-screen to the left */
-      transform: translateX(-100%);
-    }
-    100% {
-      /* Ends completely off-screen to the right */
-      transform: translateX(100%);
-    }
-  }
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-    h1, #home h1 {
-        font-size: 2.2rem;
-    }
-
-    section {
-        padding: 60px 0;
-    }
-
-    .text-box-with-bg {
-        padding: 1.5rem;
-    }
 }
