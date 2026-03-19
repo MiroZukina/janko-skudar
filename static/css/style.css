@@ -132,52 +132,34 @@ footer {
   color: #f8f9fa;
   padding: 20px 0;
 }
-
-/* ============================================================
- MOBILE FIXES (Targeting phones and tablets)
- ============================================================ */
-
 @media (max-width: 991px) {
   #home {
-      /* 1. POSITION THE SUNSET ON THE LEFT/MIDDLE */
-      /* 'fixed' background is disabled here because it breaks mobile positioning */
-      background-attachment: scroll !important; 
-      background-position: 85% center !important; 
+      /* Shortens the background */
+      height: auto !important;
+      min-height: 600px !important; 
       
-      /* 2. FIX THE GAP */
-      /* Change from 'center' to 'flex-start' to pull everything up */
-      align-items: flex-start !important; 
-      padding-top: 110px; /* Space for the fixed navbar */
-      padding-bottom: 40px;
-      height: auto; 
+      /* Positions the sun in the middle */
+      background-position: 85% center !important;
+      background-attachment: scroll !important;
+
+      /* Fixes the stacking */
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding-top: 60px !important;
   }
 
   .text-box-with-bg {
-      padding: 1.5rem;
-      margin-bottom: 25px !important; /* Forces the logo to sit closer to the button */
-      text-align: center;
-  }
-
-  #home h1 {
-      font-size: 2rem;
+      width: 90% !important;
+      margin-bottom: 20px !important; /* Creates space so it doesn't touch the logo */
   }
 
   #hero-logo {
-      max-width: 180px; /* Prevents logo from being too huge on mobile */
-      margin-top: 0;
-  }
-
-  section {
-      padding: 60px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  #home h1 {
-      font-size: 1.7rem;
-  }
-  
-  #home .lead {
-      font-size: 1rem;
+      /* Centers the logo below the box */
+      margin: 0 auto !important;
+      max-width: 150px !important;
+      display: block !important;
+      position: static !important; /* Ensures it doesn't float over the button */
   }
 }
