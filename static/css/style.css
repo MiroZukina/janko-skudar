@@ -132,34 +132,36 @@ footer {
   color: #f8f9fa;
   padding: 20px 0;
 }
+
 @media (max-width: 991px) {
   #home {
-      /* Shortens the background */
+      /* 1. SHORTEN THE BACKGROUND */
       height: auto !important;
-      min-height: 600px !important; 
+      /* Changing 500px to 450px makes it even tighter */
+      min-height: 450px !important; 
       
-      /* Positions the sun in the middle */
-      background-position: 85% center !important;
+      /* 2. POSITION THE SUN */
       background-attachment: scroll !important;
-
-      /* Fixes the stacking */
+      background-position: 85% center !important; 
+      
+      /* 3. ALIGNMENT */
       display: flex !important;
       flex-direction: column !important;
+      justify-content: flex-start !important; /* Pulls text to the top */
       align-items: center !important;
-      justify-content: center !important;
-      padding-top: 60px !important;
+      padding-top: 100px !important; /* Space for navbar */
   }
 
   .text-box-with-bg {
       width: 90% !important;
-      margin-bottom: 20px !important; /* Creates space so it doesn't touch the logo */
+      margin-bottom: 0px !important; /* Removes gap below button */
   }
 
   #hero-logo {
-      /* Centers the logo below the box */
-      margin: 0 auto !important;
-      max-width: 150px !important;
+      /* This creates a clean gap so the logo doesn't touch the button */
+      margin-top: 20px !important; 
+      max-width: 130px !important;
+      position: static !important;
       display: block !important;
-      position: static !important; /* Ensures it doesn't float over the button */
   }
 }
