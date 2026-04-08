@@ -1,167 +1,219 @@
-/* Color Palette:
-- Dark Blue (Headings, Navbar): #2c3e50
-- Primary Blue (Buttons, Links): #3498db
-- Light Grey (Backgrounds): #f8f9fa
-- Text Color: #333
-*/
-
-/* --- General & Font Styles --- */
-body {
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: #2c3e50;
-}
-
-.section-title {
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-p {
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-/* --- Navigation Bar --- */
-.navbar {
-  background-color: #2c3e50;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.navbar-brand small {
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-.nav-link {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-/* --- Section Styling --- */
-section {
-  padding: 80px 0;
-}
-
-.bg-light {
-  background-color: #f8f9fa !important;
-}
-
-/* --- Home / Hero Section --- */
+/* =============================================
+   Color Palette
+   ============================================= */
+   :root {
+    --dark-blue: #2c3e50;
+    --primary-blue: #3498db;
+    --light-gray: #f8f9fa;
+    --text-color: #333;
+  }
+  
+  /* --- General & Typography --- */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--dark-blue);
+  }
+  
+  .section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding-bottom: 12px;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-blue);
+  }
+  
+  p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  
+  /* --- Navigation --- */
+  .navbar {
+    background-color: var(--dark-blue) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+  }
+  
+  .navbar-brand small {
+    font-size: 0.82rem;
+    opacity: 0.85;
+  }
+  
+  .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.92rem;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem !important;
+  }
+  
+  /* --- Hero Section --- */
+  /* --- Hero Section --- */
 #home {
   min-height: 100vh;
-  width: 100%;
-  background-image: url('/static/images/IMG2.jpeg');
+  background-image: url('/static/images/IMG2.jpeg');   /* your original working path */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect for desktop */
+  background-attachment: fixed;
+  position: relative;
   display: flex;
   align-items: center;
 }
 
+/* Lighter overlay - this is the main fix */
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.20);   /* Reduced from 0.50 or 0.55 → now much lighter */
+  z-index: 1;
+}
+
+/* Content stays on top of overlay */
+#home > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text box styling */
 .text-box-with-bg {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2.5rem;
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1e2a38;
+  padding: 2.8rem 2.4rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
 }
 
 #home h1 {
-  color: #fff;
-  font-size: 3rem;
+  color: #1e2a38;
+  font-size: 2.85rem;
+  line-height: 1.15;
 }
 
 #home .lead {
-  color: #f1f1f1;
+  color: #2c3e50;
   font-size: 1.25rem;
 }
-
-/* --- Logo & Animations --- */
-#hero-logo {
-  max-width: 80%;
-  height: auto;
-  opacity: 0.9;
-  animation: beat 2.5s infinite ease-in-out;
-  display: block;
-  margin: 0 auto;
-}
-
-@keyframes beat {
-  0% { transform: scale(1); }
-  15% { transform: scale(1.05); }
-  30% { transform: scale(1); }
-  100% { transform: scale(1); }
-}
-
-/* --- Buttons & Links --- */
-.btn-primary {
-  background-color: #3498db;
-  border-color: #3498db;
-  padding: 12px 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #2980b9;
-  border-color: #2980b9;
-  transform: translateY(-2px);
-}
-
-/* --- FAQ Accordion --- */
-.accordion-button {
-  font-weight: 700;
-  color: #2c3e50;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: rgba(52, 152, 219, 0.1);
-}
-
-/* --- Footer --- */
-footer {
-  background-color: #2c3e50;
-  color: #f8f9fa;
-  padding: 20px 0;
-}
-
-@media (max-width: 991px) {
-  #home {
-      /* 1. SHORTEN THE BACKGROUND */
-      height: auto !important;
-      /* Changing 500px to 450px makes it even tighter */
-      min-height: 450px !important; 
-      
-      /* 2. POSITION THE SUN */
-      background-attachment: scroll !important;
-      background-position: 85% center !important; 
-      
-      /* 3. ALIGNMENT */
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: flex-start !important; /* Pulls text to the top */
-      align-items: center !important;
-      padding-top: 100px !important; /* Space for navbar */
-  }
-
-  .text-box-with-bg {
-      width: 90% !important;
-      margin-bottom: 0px !important; /* Removes gap below button */
-  }
-
+  
+  /* Hero Logo */
   #hero-logo {
-      /* This creates a clean gap so the logo doesn't touch the button */
-      margin-top: 20px !important; 
-      max-width: 130px !important;
-      position: static !important;
-      display: block !important;
+    max-width: 260px;
+    height: auto;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease;
   }
-}
+  
+  #hero-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Subtle pulse instead of strong "beat" */
+  @keyframes gentlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+  
+  #hero-logo {
+    animation: gentlePulse 4s infinite ease-in-out;
+  }
+  
+  /* --- Buttons --- */
+  .btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    padding: 14px 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+  }
+  
+  /* --- FAQ --- */
+  .accordion-button {
+    font-weight: 600;
+    color: var(--dark-blue);
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(52, 152, 219, 0.08);
+    color: var(--dark-blue);
+  }
+  
+  /* --- Footer --- */
+  footer {
+    background-color: var(--dark-blue);
+    color: #ddd;
+    padding: 2rem 0;
+    font-size: 0.95rem;
+  }
+  
+  /* =============================================
+     Responsive Design
+     ============================================= */
+  @media (max-width: 991px) {
+    #home {
+      min-height: 85vh !important;
+      background-attachment: scroll !important;  
+      background-position: right center !important;
+      padding-top: 80px;
+    }
+
+    #home::before {
+      background: rgba(0, 0, 0, 0.20);   /* Slightly darker on mobile for better text contrast */
+    }
+  
+    #home h1 {
+      font-size: 2.2rem;
+    }
+  
+    .text-box-with-bg {
+      padding: 2rem 1.8rem;
+      margin-bottom: 2rem;
+    }
+  
+    #hero-logo {
+      max-width: 180px;
+      margin-top: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #home h1 {
+      font-size: 1.95rem;
+    }
+    
+    .text-box-with-bg {
+      padding: 1.8rem 1.4rem;
+    }
+  }
