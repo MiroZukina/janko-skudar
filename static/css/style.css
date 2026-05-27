@@ -39,6 +39,12 @@
     background-color: var(--primary-blue);
   }
   
+  /* Explicit layout alignment adjustment for the "About Me" title section */
+  #about .section-title::after {
+    left: 0;
+    transform: none;
+  }
+  
   p {
     font-size: 1.05rem;
     line-height: 1.75;
@@ -65,57 +71,57 @@
   }
   
   /* --- Hero Section --- */
-  /* --- Hero Section --- */
-#home {
-  min-height: 100vh;
-  background-image: url('/static/images/IMG2.jpeg');   /* your original working path */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-/* Lighter overlay - this is the main fix */
-#home::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.20);   /* Reduced from 0.50 or 0.55 → now much lighter */
-  z-index: 1;
-}
-
-/* Content stays on top of overlay */
-#home > .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Text box styling */
-.text-box-with-bg {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #1e2a38;
-  padding: 2.8rem 2.4rem;
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
-}
-
-#home h1 {
-  color: #1e2a38;
-  font-size: 2.85rem;
-  line-height: 1.15;
-}
-
-#home .lead {
-  color: #2c3e50;
-  font-size: 1.25rem;
-}
+  #home {
+    min-height: 100vh;
+    background-image: url('/static/images/IMG2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 0; /* Ensures ample space around the new text formatting block */
+  }
   
-  /* Hero Logo */
+  /* Lighter background image layer protection rule */
+  #home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.20);
+    z-index: 1;
+  }
+  
+  /* Content stays on top of overlay */
+  #home > .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Text box styling */
+  text-box-with-bg {
+    background-color: rgba(255, 255, 255, 0.95) !important; /* Clean light background box */
+    padding: 2.8rem 2.4rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  }
+  
+  #home h1 {
+    color: #000000 !important; /* Forces title to solid black */
+    font-size: 2.85rem;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  
+  #home p {
+    color: #000000 !important; /* Forces ALL paragraph text to solid black */
+    font-size: 1.05rem !important;
+    line-height: 1.75;
+  }
+  /* Hero Logo Container Configuration Rules */
   #hero-logo {
     max-width: 260px;
     height: auto;
@@ -123,20 +129,17 @@
     border: 8px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     transition: transform 0.4s ease;
+    animation: gentlePulse 4s infinite ease-in-out;
   }
   
   #hero-logo:hover {
     transform: scale(1.05);
   }
   
-  /* Subtle pulse instead of strong "beat" */
+  /* Subtle animation configuration */
   @keyframes gentlePulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.03); }
-  }
-  
-  #hero-logo {
-    animation: gentlePulse 4s infinite ease-in-out;
   }
   
   /* --- Buttons --- */
@@ -183,18 +186,19 @@
      ============================================= */
   @media (max-width: 991px) {
     #home {
-      min-height: 85vh !important;
+      min-height: auto !important; /* Critical: allows long box text to grow freely on mobile viewport containers */
       background-attachment: scroll !important;  
-      background-position: right center !important;
-      padding-top: 80px;
+      background-position: right top !important;
+      padding: 120px 0 60px 0; /* Comfortably clears fixed-top layout elements */
     }
-
+  
     #home::before {
-      background: rgba(0, 0, 0, 0.20);   /* Slightly darker on mobile for better text contrast */
+      background: rgba(0, 0, 0, 0.35); /* Added slight opacity drop for readability depth on smaller screen layers */
     }
   
     #home h1 {
       font-size: 2.2rem;
+      margin-bottom: 1.2rem;
     }
   
     .text-box-with-bg {
