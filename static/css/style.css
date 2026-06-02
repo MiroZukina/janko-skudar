@@ -54,7 +54,12 @@
   .navbar {
     background-color: var(--dark-blue) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-logo {
+    max-width: 52px;
+    border-radius: 50%;
   }
   
   .navbar-brand small {
@@ -80,7 +85,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 100px 0; /* Ensures ample space around the new text formatting block */
+    padding: 130px 0 60px 0; /* Extra space at top prevents logo cutting off your text-box container */
+    overflow: hidden;
   }
   
   /* Lighter background image layer protection rule */
@@ -102,25 +108,27 @@
   }
   
   /* Text box styling */
-  text-box-with-bg {
-    background-color: rgba(255, 255, 255, 0.95) !important; /* Clean light background box */
+  .text-box-with-bg {
+    background-color: #ffffff !important;   /* Solid white background box */
     padding: 2.8rem 2.4rem;
     border-radius: 12px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+    width: 100%;
   }
   
-  #home h1 {
-    color: #000000 !important; /* Forces title to solid black */
+  #home .text-box-with-bg h1 {
+    color: #1e2a38 !important;              /* High-contrast dark blue heading applied explicitly over white box */
     font-size: 2.85rem;
     line-height: 1.15;
     margin-bottom: 1.5rem;
   }
   
-  #home p {
-    color: #000000 !important; /* Forces ALL paragraph text to solid black */
+  #home .text-box-with-bg p {
+    color: #2c3e50 !important;              /* Soft dark gray-blue description layout override */
     font-size: 1.05rem !important;
     line-height: 1.75;
   }
+  
   /* Hero Logo Container Configuration Rules */
   #hero-logo {
     max-width: 260px;
@@ -142,6 +150,29 @@
     50% { transform: scale(1.03); }
   }
   
+  /* --- About & Therapy Layout Constraints --- */
+  .profile-img {
+    max-width: 320px;
+  }
+  
+  .option-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px !important;
+  }
+  
+  .option-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  .option-heading {
+    color: #1e2a38;
+  }
+  
+  .feature-text {
+    color: #444;
+  }
+  
   /* --- Buttons --- */
   .btn-primary {
     background-color: var(--primary-blue);
@@ -161,7 +192,34 @@
     box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
   }
   
-  /* --- FAQ --- */
+  .btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+  }
+  
+  /* --- FAQ & Contact Cleanups --- */
+  .faq-container {
+    max-width: 850px;
+  }
+  
+  .contact-container {
+    max-width: 600px;
+  }
+  
+  .social-icon {
+    width: 34px;
+    height: auto;
+  }
+  
   .accordion-button {
     font-weight: 600;
     color: var(--dark-blue);
@@ -186,17 +244,17 @@
      ============================================= */
   @media (max-width: 991px) {
     #home {
-      min-height: auto !important; /* Critical: allows long box text to grow freely on mobile viewport containers */
+      min-height: auto !important; 
       background-attachment: scroll !important;  
       background-position: right top !important;
-      padding: 120px 0 60px 0; /* Comfortably clears fixed-top layout elements */
+      padding: 120px 0 60px 0; 
     }
   
     #home::before {
-      background: rgba(0, 0, 0, 0.35); /* Added slight opacity drop for readability depth on smaller screen layers */
+      background: rgba(0, 0, 0, 0.35); 
     }
   
-    #home h1 {
+    #home .text-box-with-bg h1 {
       font-size: 2.2rem;
       margin-bottom: 1.2rem;
     }
@@ -213,7 +271,7 @@
   }
   
   @media (max-width: 576px) {
-    #home h1 {
+    #home .text-box-with-bg h1 {
       font-size: 1.95rem;
     }
     

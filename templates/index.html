@@ -26,10 +26,7 @@
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="/">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" 
-                         class="img-fluid me-3" 
-                         alt="Janko Skudar Logo" 
-                         style="max-width: 52px; border-radius: 50%;">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid navbar-logo" alt="Janko Skudar Logo">
                     <span>Janko Skudar<br>
                         <small>Psychotherapist</small>
                     </span>
@@ -48,7 +45,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#approach">Online Therapy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#approach">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -59,31 +56,26 @@
 
     <!-- Hero Section -->
     <section id="home" class="d-flex align-items-center text-white">
-        <div class="container position-relative z-3">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="text-box-with-bg">
                         <h1>Guiding You Towards Clarity and Healing</h1>
                         <p class="mb-3">
-                            My approach to therapy is warm, collaborative, and tailored to each person’s individual needs. 
-                            I believe that many of our struggles develop as ways of coping with stress, difficult experiences, 
-                            or emotional pain. In therapy, we work together to better understand these patterns, explore 
-                            emotions in a safe and supportive space, and find healthier ways of relating to yourself and others.
+                            My approach to therapy is warm, collaborative, and tailored to your individual needs. 
+                            Together, we will work to understand your struggles, explore emotions in a safe space, 
+                            and find healthier ways of relating to yourself and others.
                         </p>
                         <p class="mb-4">
-                            My work is integrative, which means I draw from different therapeutic approaches depending on what 
-                            feels most helpful for you. Whether you are struggling with anxiety, low mood, relationship 
-                            difficulties, trauma, or feeling stuck in life, therapy can offer a space for reflection, 
-                            understanding, and meaningful change.
+                            Drawing from different integrative methods, I support adults facing anxiety, low mood, 
+                            relationship difficulties, or trauma. Therapy offers you a supportive space for reflection, 
+                            healing, and meaningful change.
                         </p>
                         <a href="#contact" class="btn btn-primary btn-lg mt-2">Schedule a Consultation</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center mt-5 mt-lg-0">
-                    <img id="hero-logo" 
-                         src="{{ url_for('static', filename='images/logo.png') }}" 
-                         alt="Janko Skudar" 
-                         class="img-fluid">
+                    <img id="hero-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Janko Skudar" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -99,39 +91,49 @@
                     <p>I support adults facing anxiety, depression, trauma, relationship challenges, and life transitions. My goal is to create a warm, non-judgmental space where you can explore your experiences and work towards meaningful growth.</p>
                 </div>
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <img src="{{ url_for('static', filename='images/profile.jpeg') }}" 
-                         alt="Janko Skudar Psychotherapist" 
-                         class="img-fluid rounded-circle shadow-lg" 
-                         style="max-width: 320px;">
+                    <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Janko Skudar Psychotherapist" class="img-fluid rounded-circle shadow-lg profile-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Approach Section -->
+    <!-- Combined Services Section -->
     <section id="approach" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Online Therapy</h2>
+                <h2 class="section-title">Therapy Options</h2>
+                <p class="lead text-muted fs-6">Flexible options tailored to fit your lifestyle and comfort levels.</p>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="bg-white p-5 rounded-3 shadow-sm text-center">
-                        <p class="lead mb-4 fw-semibold" style="color: #2c3e50;">
-                            Convenient and effective therapy from the comfort of your home.
-                        </p>
-                        <p class="mb-4" style="color: #333;">
-                            No travel requirements, flexible timing options, and fully secure, private video sessions. 
-                            It is perfectly suited for busy professional schedules, remote areas, or if you live abroad.
-                        </p>
-                        <p class="mb-4 fw-medium" style="color: #333;">
-                            Clinical research shows that online therapy delivers the exact same positive clinical outcomes as traditional in-person sessions.
-                        </p>
-                        <div class="mt-4">
-                            <a href="#contact" class="btn btn-primary btn-lg">
-                                Start Online Therapy
-                            </a>
+            <div class="row g-4 justify-content-center">
+                <!-- Column 1: Online Therapy Details -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column justify-content-between option-card">
+                        <div>
+                            <h3 class="fw-bold mb-3 h5 option-heading">Online Therapy</h3>
+                            <p class="small text-muted mb-3 fw-semibold">Convenient & Effective</p>
+                            <p class="small text-start mb-3 feature-text">
+                                No travel requirements, flexible timing options, and fully secure, private video sessions from the comfort of your home.
+                            </p>
+                            <p class="small text-start feature-text">
+                                Clinical research shows that online sessions deliver the exact same positive clinical outcomes as traditional in-person settings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Face-to-Face Details -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column justify-content-between option-card">
+                        <div>
+                            <h3 class="fw-bold mb-3 h5 option-heading">Face-to-Face Sessions</h3>
+                            <p class="small text-muted mb-3 fw-semibold">Castletroy, Co. Limerick</p>
+                            <p class="small text-start mb-3 feature-text">
+                                In-person therapy sessions offer a grounded, private, and deeply supportive space where we can work together at a comfortable pace.
+                            </p>
+                            <p class="small text-start feature-text">
+                                I currently see clients at <strong>Oakwood Psychology and Psychotherapy Consultants</strong> in <strong>Castletroy</strong>, providing a calm environment.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -139,198 +141,115 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-            </div>
+   <!-- FAQ Section -->
+   <section id="faq" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="accordion mx-auto faq-container" id="faqAccordion">
             
-            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 850px;">
-                
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                            How do I get started?
-                        </button>
-                    </h2>
-                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            You can contact me via email or WhatsApp to arrange an initial session. Once we agree on a time, I’ll send you a secure link for the session.
-                        </div>
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How do I get started?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can contact me via email or phone to arrange an initial session. Once we agree on a time, I’ll send you all the required details.
                     </div>
                 </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                            What can I talk about in therapy?
-                        </button>
-                    </h2>
-                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            You can bring anything that feels important to you — whether it’s anxiety, low mood, relationship difficulties, past experiences, or simply a sense that something isn’t quite right. There’s no “right” place to start.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-                            How long is a session?
-                        </button>
-                    </h2>
-                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Sessions typically last 50 minutes.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                            How often do sessions take place?
-                        </button>
-                    </h2>
-                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Most people attend once a week, especially at the beginning. This helps build momentum and allows the work to develop. We can review this together as therapy progresses.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-                            Is online therapy as effective as in-person therapy?
-                        </button>
-                    </h2>
-                    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes. Research and experience show that online therapy can be just as effective. Many people also find it more comfortable and easier to fit into their routine.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
-                            Is everything I say confidential?
-                        </button>
-                    </h2>
-                    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes. What you share in therapy is confidential. The only exceptions are rare situations where there is a risk of serious harm to yourself or others, in line with professional guidelines.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
-                            What if I don’t know what to say?
-                        </button>
-                    </h2>
-                    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            That’s completely okay. Many people feel this way at the beginning. We can take our time, and I will support you in finding a way to begin.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
-                            How many sessions will I need?
-                        </button>
-                    </h2>
-                    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            This varies from person to person. Some people come for a short period to work through a specific issue, while others stay longer for deeper exploration. We can discuss your goals and review this together over time.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
-                            What if I feel nervous about starting therapy?
-                        </button>
-                    </h2>
-                    <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Feeling nervous is very common. Starting therapy is a big step. We’ll go at a pace that feels comfortable for you.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
-                            What happens in the first session?
-                        </button>
-                    </h2>
-                    <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            The first session is a chance for us to get to know each other. We’ll talk about what brings you to therapy, what you’re hoping for, and any questions you might have. There’s no pressure to share everything straight away.
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What can I talk about in therapy?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can bring anything that feels important to you — whether it’s anxiety, low mood, relationship difficulties, past experiences, or simply a sense that something isn’t quite right. There’s no "right" place to start.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How long is a session?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Sessions typically last 50 minutes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How often do sessions take place?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Most people attend once a week, especially at the beginning. This helps build momentum and allows the work to develop.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Is online therapy as effective as in-person therapy?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes. Research and experience show that online therapy can be just as effective. Many people also find it more comfortable and easier to fit into their routine.
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
-
-    <!-- Contact & Face-to-Face Section -->
+    </div>
+</section>
+    <!-- Contact Section -->
     <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center text-center g-4">
-                
-                <!-- Face to Face Details Column -->
-                <div class="col-md-6 px-4">
-                    <h3 class="fw-bold mb-3" style="color: var(--dark-blue);">Face-to-Face Sessions</h3>
-                    <p class="small text-start mb-3" style="color: #444;">
-                        In-person therapy sessions offer a private and supportive space where we can work together at a pace that feels comfortable for you.
-                    </p>
-                    <p class="small text-start mb-3" style="color: #444;">
-                        Some people prefer meeting face-to-face as it can feel more personal and grounding, helping to build connection and trust within the therapeutic process.
-                    </p>
-                    <p class="small text-start fw-medium" style="color: #222;">
-                        I currently see clients at <strong>Oakwood Psychology and Psychotherapy Consultants</strong> in <strong>Castletroy, Limerick</strong>, providing a calm and confidential environment for therapy sessions.
-                    </p>
-                </div>
+        <div class="container text-center contact-container">
+            <h2 class="section-title">Take the Next Step</h2>
+            <p class="lead fs-6 mb-4">Contact me today to schedule a consultation and begin your journey toward healing and clarity.</p>
+            
+            <!-- Action Buttons Group -->
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                <a href="mailto:janko.skudar@gmail.com?subject=Therapy%20Consultation%20Inquiry" class="btn btn-primary btn-lg px-4" target="_blank">
+                    Email Me
+                </a>
+                <a href="tel:+35387608693" class="btn btn-primary btn-lg px-4">
+                    Call Me
+                </a>
+            </div>
 
-                <!-- Call to Action & Social Column -->
-                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
-                    <h3 class="fw-bold mb-3" style="color: var(--dark-blue);">Take the Next Step</h3>
-                    <p class="lead fs-6 mb-4">Contact me today to schedule a consultation and begin your journey toward healing and clarity.</p>
-                    
-                    <!-- Action Buttons Group -->
-                    <div class="d-flex flex-wrap justify-content-center gap-3">
-                        <a href="mailto:janko.skudar@gmail.com?subject=Therapy%20Consultation%20Inquiry" 
-                           class="btn btn-primary btn-lg px-4" target="_blank">
-                            Email Me
-                        </a>
-                        <!-- The number is hidden from the text but still dials behind the scenes -->
-                        <a href="tel:+353876086935"class="btn btn-primary btn-lg px-4">
-                            Call Me
-                        </a>
-                    </div>
-
-                    <div class="d-flex justify-content-center gap-4 mt-4">
-                        <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" title="Telegram">
-                            <img src="{{ url_for('static', filename='images/telegram.svg') }}" alt="Telegram" width="38">
-                        </a>
-                        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" title="X / Twitter">
-                            <img src="{{ url_for('static', filename='images/twitter-x.svg') }}" alt="X" width="38">
-                        </a>
-                        <a href="https://www.instagram.com/jankoskudar/" target="_blank" title="Instagram">
-                            <img src="{{ url_for('static', filename='images/instagram.svg') }}" alt="Instagram" width="38">
-                        </a>
-                    </div>
-                </div>
-
+            <!-- Social Links -->
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" title="Telegram">
+                    <img src="{{ url_for('static', filename='images/telegram.svg') }}" alt="Telegram" class="social-icon">
+                </a>
+                <a href="https://twitter.com/YOUR_TWITTER" target="_blank" title="X / Twitter">
+                    <img src="{{ url_for('static', filename='images/twitter-x.svg') }}" alt="X" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/jankoskudar/" target="_blank" title="Instagram">
+                    <img src="{{ url_for('static', filename='images/instagram.svg') }}" alt="Instagram" class="social-icon">
+                </a>
             </div>
         </div>
     </section>
@@ -340,9 +259,9 @@
         <p class="mb-0">© 2026 Janko Skudar Psychotherapy. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap 5 JavaScript Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
 </body>
 </html>
