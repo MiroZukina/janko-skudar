@@ -4,38 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Janko Skudar, psihoterapeut i stručnjak u Irskoj. Specijaliziran za anksioznost, depresiju, traumu i partnerske odnose. Individualna i grupna psihoterapija.">
-    <meta name="keywords" content="Janko Skudar, psihoterapeut, psihijatar, terapija, Irska, anksioznost, depresija, trauma">
-    
-    <title>Janko Skudar | Psihoterapeut u Irskoj</title>
-    
-    <link rel="icon" type="image/png" sizes="32px" href="{{ url_for('static', filename='images/logo.png') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Janko Skudar | Psihoterapeut</title>
+    <meta name="description" content="Janko Skudar je integrativni psihoterapeut u Irskoj koji nudi terapiju za anksioznost, depresiju, traumu i odnose. Dostupno na engleskom i hrvatskom jeziku. Seanse uživo (područje Limericka) i online.">
+    <meta name="keywords" content="Janko Skudar, psihoterapeut Irska, psihoterapeut, terapija anksioznosti, terapija traume, depresija, hrvatski terapeut u Irskoj, online psihoterapija">
+
+    <link class="img-fluid" rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
+    <!-- Navbar -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid me-3" alt="Logo" style="max-width: 50px; border-radius: 50%;">
-                    <span>Janko Skudar<br/><small>Psihoterapeut</small></span>
+                <a class="navbar-brand d-flex align-items-center" href="/hr">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid navbar-logo" alt="Janko Skudar Logo">
+                    <span>Janko Skudar<br>
+                        <small>Psihoterapeut</small>
+                    </span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item d-flex align-items-center px-3">
-                            <a class="nav-link px-1" href="/">EN</a>
-                            <span class="text-white">|</span>
-                            <a class="nav-link px-1 active" href="/hr">HR</a>
+                            <a class="nav-link" href="/">EN</a>
+                            <span class="text-white mx-2">|</span>
+                            <a class="nav-link fw-bold text-info" href="/hr">HR</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#home">Početna</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">O meni</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#approach">Pristup</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#approach">Usluge</a></li>
                         <li class="nav-item"><a class="nav-link" href="#faq">Česta pitanja</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
                     </ul>
@@ -44,41 +54,222 @@
         </nav>
     </header>
 
-    <section id="home" class="text-white">
+    <!-- Hero Section -->
+    <section id="home" class="d-flex align-items-center text-white">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
                     <div class="text-box-with-bg">
-                        <h1>Put prema jasnoći i iscjeljenju</h1>
-                        <p class="lead">Pomažem pojedincima i parovima u svladavanju izazova poput anksioznosti, depresije, traume i poteškoća u odnosima, pružajući podršku na vašem putu prema ispunjenijem životu.</p>
-                        <a href="#contact" class="btn btn-primary btn-lg mt-3">Dogovorite konzultacije</a>
+                        <h1>Na putu prema jasnoći i iscjeljenju</h1>
+                        <p class="mb-3">
+                            Moj pristup terapiji je topao, suradnički i prilagođen vašim individualnim potrebama. 
+                            Zajedno ćemo raditi na razumijevanju vaših poteškoća, istraživati emocije u sigurnom okruženju 
+                            te pronaći zdravije načine odnosa prema sebi i drugima.
+                        </p>
+                        <p class="mb-4">
+                            Koristeći različite integrativne metode, pružam podršku odraslim osobama koje se suočavaju s anksioznošću, 
+                            niskim raspoloženjem, poteškoćama u odnosima ili traumom. Terapija vam nudi siguran prostor za refleksiju, 
+                            osnaživanje i pozitivnu promjenu.
+                        </p>
+                        <a href="#contact" class="btn btn-primary btn-lg mt-2">Dogovorite konzultacije</a>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center">
-                    <img id="hero-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Janko Skudar Logo" class="img-fluid">
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                    <img id="hero-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Janko Skudar" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="section-title">O meni</h2>
-                    <p>Zdravo, ja sam Janko Skudar. Moj put od inženjerstva do psihoterapije pružio mi je jedinstvenu perspektivu na osobne promjene, otpornost i mentalno zdravlje. Radim u Irskoj, podržavajući odrasle osobe iz različitih sredina. Moj cilj je pružiti siguran prostor pun razumijevanja gdje možete istražiti svoj unutarnji svijet i pronaći smislene promjene.</p>
+                    <p>Pozdrav, ja sam Janko Skudar, integrativni psihoterapeut s adresom u Irskoj. Moje osobno i profesionalno iskustvo daje mi duboko razumijevanje osobnih promjena, otpornosti i mentalne dobrobiti.</p>
+                    <p>Pružam podršku odraslim osobama koje se suočavaju s anksioznošću, depresijom, traumom, izazovima u odnosima i životnim tranzicijama. Moj cilj je stvoriti sigurno okruženje puno prihvaćanja u kojem možete istražiti svoja iskustva i raditi na osobnom rastu.</p>
                 </div>
-                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Janko Skudar" class="img-fluid rounded-circle shadow-lg" style="max-width: 70%;">
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Janko Skudar Psihoterapeut" class="img-fluid rounded-circle shadow-lg profile-img">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Therapy Options / Services Section -->
+    <section id="approach" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Opcije terapije</h2>
+                <p class="lead text-muted fs-6">Fleksibilne opcije prilagođene vašem načinu života i potrebama.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Column 1: Online Therapy Details -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column justify-content-between option-card">
+                        <div>
+                            <h3 class="fw-bold mb-3 h5 option-heading">Online terapija</h3>
+                            <p class="small text-muted mb-3 fw-semibold">Praktično i učinkovito</p>
+                            <p class="small text-start mb-3 feature-text">
+                                Bez potrebe za putovanjem, uz fleksibilne termine i potpuno sigurne, privatne video seanse iz udobnosti vašeg doma.
+                            </p>
+                            <p class="small text-start feature-text">
+                                Klinička istraživanja pokazuju da online seanse donose jednako učinkovite i pozitivne rezultate kao i tradicionalna terapija uživo.
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#contact" class="btn btn-outline-primary btn-sm w-100">Saznajte više</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Face-to-Face Details -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column justify-content-between option-card">
+                        <div>
+                            <h3 class="fw-bold mb-3 h5 option-heading">Seanse uživo</h3>
+                            <p class="small text-muted mb-3 fw-semibold">Castletroy, Co. Limerick</p>
+                            <p class="small text-start mb-3 feature-text">
+                                Terapija uživo pruža stabilan, privatan i duboko podržavajući prostor u kojem možemo raditi zajedno u ritmu koji vama odgovara.
+                            </p>
+                            <p class="small text-start feature-text">
+                                Klijente primam na adresi <strong>14/34 University Court, Castletroy, Limerick</strong>, koja osigurava mirno i ugodno okruženje.
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#contact" class="btn btn-outline-primary btn-sm w-100">Pogledajte lokaciju</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Često postavljana pitanja</h2>
+            </div>
+            
+            <div class="accordion mx-auto faq-container" id="faqAccordion">
+                
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Kako započeti?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small text-muted">
+                            Možete me kontaktirati putem e-maila ili telefona kako bismo dogovorili prvu seansu. Nakon što uskladimo termin, poslat ću vam sve potrebne detalje.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            O čemu mogu razgovarati na terapiji?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small text-muted">
+                            Možete donijeti bilo koju temu koja vam je važna — bilo da se radi o anksioznosti, lošem raspoloženju, problemima u odnosima, prošlim iskustvima ili jednostavno osjećaju da nešto nije u redu. Ne postoji "pogrešno" mjesto za početak.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Koliko traje seansa?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small text-muted">
+                            Seanse obično traju 50 minuta.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Koliko često se održavaju seanse?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small text-muted">
+                            Većina ljudi dolazi jednom tjedno, osobito na samom početku. To pomaže u održavanju kontinuiteta i omogućuje stabilniji terapijski proces.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed fs-6 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Je li online terapija jednako učinkovita kao i terapija uživo?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small text-muted">
+                            Da. Istraživanja i praktično iskustvo pokazuju da online terapija može biti jednako učinkovita. Mnogi klijenti smatraju da im je lakše uskladiti online seanse sa svakodnevnim obavezama.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center contact-container">
+            <h2 class="section-title">Učinite sljedeći korak</h2>
+            <p class="lead fs-6 mb-4">Kontaktirajte me danas kako biste dogovorili konzultacije i započeli svoj put prema iscjeljenju i jasnoći.</p>
+            
+            <!-- Action Buttons Group -->
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                <a href="mailto:janko.skudar@gmail.com?subject=Upit%20za%20psihoterapijske%20konzultacije" class="btn btn-primary btn-lg px-4" target="_blank">
+                    Pošaljite e-mail
+                </a>
+                <a href="tel:+353876086935" class="btn btn-primary btn-lg px-4">
+                    Nazovite me
+                </a>
+            </div>
+
+            <!-- Social Links (WhatsApp and Instagram) -->
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="https://wa.me/353876086935" target="_blank" title="WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/jankoskudar/" target="_blank" title="Instagram">
+                    <img src="{{ url_for('static', filename='images/instagram.svg') }}" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+
+            <!-- Physical Location Address Block -->
+            <p class="small text-muted mt-3">
+                <strong>Lokacija:</strong> 14/34 University Court, Castletroy, Limerick
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="text-center py-4">
-        <p>© 2025 Janko Skudar Psihoterapija. Sva prava pridržana.</p>
+        <p class="mb-0">© 2026 Janko Skudar Psihoterapija. Sva prava pridržana.</p>
     </footer>
 
+    <!-- Bootstrap 5 JavaScript Bundle Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
 </body>
 </html>
