@@ -8,6 +8,14 @@
     <meta name="description" content="Janko Skudar je integrativni psihoterapeut u Irskoj koji nudi terapiju za anksioznost, depresiju, traumu i odnose. Dostupno na engleskom i hrvatskom jeziku. Seanse uživo (područje Limericka) i online.">
     <meta name="keywords" content="Janko Skudar, psihoterapeut Irska, psihoterapeut, terapija anksioznosti, terapija traume, depresija, hrvatski terapeut u Irskoj, online psihoterapija">
 
+    <!-- Open Graph (OG) Meta Tags za društvene mreže -->
+    <meta property="og:title" content="Janko Skudar | Psihoterapeut" />
+    <meta property="og:description" content="Profesionalne usluge psihoterapije i savjetovanja." />
+    <meta property="og:image" content="https://www.janko-skudar-psychotherapist.com/static/images/professional-photo.jpg" />
+    <meta property="og:url" content="https://www.janko-skudar-psychotherapist.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="hr_HR" />
+
     <link class="img-fluid" rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
 
     <!-- Google Fonts -->
@@ -62,14 +70,10 @@
                     <div class="text-box-with-bg">
                         <h1>Na putu prema jasnoći i iscjeljenju</h1>
                         <p class="mb-3">
-                            Moj pristup terapiji je topao, suradnički i prilagođen vašim individualnim potrebama. 
-                            Zajedno ćemo raditi na razumijevanju vaših poteškoća, istraživati emocije u sigurnom okruženju 
-                            te pronaći zdravije načine odnosa prema sebi i drugima.
+                            Moj pristup terapiji je topao, suradnički i prilagođen svakom klijentu kao pojedincu. Vjerujem da mnoge naše unutarnje borbe i problemi zapravo nastaju kao načini suočavanja i preživljavanja stresa, teških životnih iskustava ili emocionalne boli.
                         </p>
                         <p class="mb-4">
-                            Koristeći različite integrativne metode, pružam podršku odraslim osobama koje se suočavaju s anksioznošću, 
-                            niskim raspoloženjem, poteškoćama u odnosima ili traumom. Terapija vam nudi siguran prostor za refleksiju, 
-                            osnaživanje i pozitivnu promjenu.
+                            Budući da je moj rad integrativan, odabirem različite terapijske metode ovisno o tome što vam se u tom trenutku čini najkorisnijim. Bez obzira borite li se s anksioznošću, lošim raspoloženjem, konfliktima u vezama, traumom iz prošlosti ili se jednostavno osjećate "zaglavljeno" u životu, terapija vam nudi posvećen prostor za refleksiju, jasnoću i istinsko iscjeljenje.
                         </p>
                         <a href="#contact" class="btn btn-primary btn-lg mt-2">Dogovorite konzultacije</a>
                     </div>
@@ -87,8 +91,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="section-title">O meni</h2>
-                    <p>Pozdrav, ja sam Janko Skudar, integrativni psihoterapeut s adresom u Irskoj. Moje osobno i profesionalno iskustvo daje mi duboko razumijevanje osobnih promjena, otpornosti i mentalne dobrobiti.</p>
-                    <p>Pružam podršku odraslim osobama koje se suočavaju s anksioznošću, depresijom, traumom, izazovima u odnosima i životnim tranzicijama. Moj cilj je stvoriti sigurno okruženje puno prihvaćanja u kojem možete istražiti svoja iskustva i raditi na osobnom rastu.</p>
+                    <p>Pozdrav, ja sam <strong>Janko Škudar</strong>, potpuno akreditirani integrativni psihoterapeut s adresom u Limericku, Irska. Akreditirani sam član Irskog udruženja za savjetovanje i psihoterapiju (IACP) te se strogo pridržavam njihovih profesionalnih i etičkih standarda.</p>
+                    <p>Radim s odraslim osobama koje se suočavaju sa širokim rasponom životnih izazova, uključujući anksioznost, depresiju, traumu, poteškoće u odnosima, nisko samopoštovanje, stres, gubitak i velike životne tranzicije. Moj primarni cilj je pružiti siguran, topao i suosjećajan prostor bez osuđivanja, u kojem možete otvoreno razgovarati, dublje razumjeti sebe i raditi na smislenim i trajnim promjenama.</p>
+                    <p>Umjesto oslanjanja na samo jedan psihološki model, u svom radu koristim kombinaciju različitih terapeutskih pravaca. Ova mi fleksibilnost omogućuje da terapiju u potpunosti prilagodim vašim jedinstvenim potrebama, osobnosti i životnim okolnostima. Moj rad je vođen elementima psihodinamske, humanističke, egzistencijalne i gestalt terapije, kognitivno-bihevioralnog pristupa (KBT), kao i teorije privrženosti te pristupa utemeljenog na traumi.</p>
+                    
+                    <!-- Insurance Alert Box -->
+                    <div class="alert alert-info mt-4" role="alert">
+                        <h5 class="alert-heading fs-6 fw-bold">ℹ️ Napomena za zdravstveno osiguranje</h5>
+                        <p class="small mb-0">Ovisno o vašem pružatelju zdravstvenog osiguranja i paketu koji koristite, možda imate pravo na povrat troškova za psihoterapijske seanse. Molimo vas da detalje svoje police provjerite izravno kod svog osiguravatelja.</p>
+                    </div>
                 </div>
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
                     <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Janko Skudar Psihoterapeut" class="img-fluid rounded-circle shadow-lg profile-img">
@@ -129,13 +140,13 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="bg-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column justify-content-between option-card">
                         <div>
-                            <h3 class="fw-bold mb-3 h5 option-heading">Seanse uživo</h3>
-                            <p class="small text-muted mb-3 fw-semibold">Castletroy, Co. Limerick</p>
+                            <h3 class="fw-bold mb-3 h5 option-heading">Psihoterapija uživo</h3>
+                            <p class="small text-muted mb-3 fw-semibold">Oakwood Consultants, Castletroy</p>
                             <p class="small text-start mb-3 feature-text">
-                                Terapija uživo pruža stabilan, privatan i duboko podržavajući prostor u kojem možemo raditi zajedno u ritmu koji vama odgovara.
+                                Seanse uživo (face-to-face) pružaju potpuno privatan, siguran i podržavajući prostor u kojem možemo raditi zajedno, tempom koji vama u potpunosti odgovara.
                             </p>
                             <p class="small text-start feature-text">
-                                Klijente primam na adresi <strong>14/34 University Court, Castletroy, Limerick</strong>, koja osigurava mirno i ugodno okruženje.
+                                Klijente primam u ustanovi <strong>Oakwood Psychology and Psychotherapy Consultants (14/34 University Court, Castletroy, Limerick)</strong> koja osigurava mirno i strogo povjerljivo okruženje.
                             </p>
                         </div>
                         <div class="mt-4">
@@ -179,7 +190,7 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                         <div class="accordion-body small text-muted">
-                            Možete donijeti bilo koju temu koja vam je važna — bilo da se radi o anksioznosti, lošem raspoloženju, problemima u odnosima, prošlim iskustvima ili jednostavno osjećaju da nešto nije u redu. Ne postoji "pogrešno" mjesto za početak.
+                            Možete donijeti bilo koju temu koja vam je važna — bilo da se radi o anksioznosti, lošem raspoloženju, problemima u odnosima, prošlim iskustvima ili jednostavno osjećaju da nešto nije u određenom balansu. Ne postoji "pogrešno" mjesto za početak.
                         </div>
                     </div>
                 </div>
@@ -258,7 +269,7 @@
 
             <!-- Physical Location Address Block -->
             <p class="small text-muted mt-3">
-                <strong>Lokacija:</strong> 14/34 University Court, Castletroy, Limerick
+                <strong>Lokacija:</strong> Oakwood Psychology and Psychotherapy Consultants, 14/34 University Court, Castletroy, Limerick
             </p>
         </div>
     </section>
