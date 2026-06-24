@@ -10,7 +10,7 @@ def index_en():
 # Croatian Route
 @app.route('/hr')
 def index_hr():
-    return render_template('index_hr.html')
+    return render_template('hr.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
