@@ -17,7 +17,6 @@ Flask-Login==0.6.2
 Flask-SQLAlchemy==3.0.5
 Flask-WTF==1.1.1
 fonttools==4.43.1
-greenlet==2.0.2
 gunicorn==21.2.0
 html5lib==1.1
 idna==3.6
